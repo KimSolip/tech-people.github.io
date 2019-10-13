@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="Network,IoT,RTLS,LBS,VertX,Node.js">
     
-    <meta name="description" content="IoT 에서의 네트워크 엔진1. 개요 인터넷이 보편화된 시점부터 지금까지 데이터 처리에 대한 관심과 이슈는 언제나 있어 왔다. 인터넷의 속도가 느렸던 과거에는 데이터량와 처리속도에 대한 이슈가 그다지 많지는 않았지만, 에러없이 데이터 처리를 하고자 하는 생각은 속도와 데이터량에 상관없이 주요 관심사였다. 5G로 가고 있는 현시점도 마찬가지로 속도와 데이터량">
+    <meta name="description" content="IoT 에서의 네트워크 엔진 작성자 : 플랫폼 개발실 실장 김완철(David Kim)  1. 개요 인터넷이 보편화된 시점부터 지금까지 데이터 처리에 대한 관심과 이슈는 언제나 있어 왔다. 인터넷의 속도가 느렸던 과거에는 데이터량와 처리속도에 대한 이슈가 그다지 많지는 않았지만, 에러없이 데이터 처리를 하고자 하는 생각은 속도와 데이터량에 상관없이 주요 관심">
 <meta name="keywords" content="Network,IoT,RTLS,LBS,VertX,Node.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Network Engine 1부">
 <meta property="og:url" content="http://yoursite.com/2019/10/12/network/index.html">
 <meta property="og:site_name" content="People and Technology">
-<meta property="og:description" content="IoT 에서의 네트워크 엔진1. 개요 인터넷이 보편화된 시점부터 지금까지 데이터 처리에 대한 관심과 이슈는 언제나 있어 왔다. 인터넷의 속도가 느렸던 과거에는 데이터량와 처리속도에 대한 이슈가 그다지 많지는 않았지만, 에러없이 데이터 처리를 하고자 하는 생각은 속도와 데이터량에 상관없이 주요 관심사였다. 5G로 가고 있는 현시점도 마찬가지로 속도와 데이터량">
+<meta property="og:description" content="IoT 에서의 네트워크 엔진 작성자 : 플랫폼 개발실 실장 김완철(David Kim)  1. 개요 인터넷이 보편화된 시점부터 지금까지 데이터 처리에 대한 관심과 이슈는 언제나 있어 왔다. 인터넷의 속도가 느렸던 과거에는 데이터량와 처리속도에 대한 이슈가 그다지 많지는 않았지만, 에러없이 데이터 처리를 하고자 하는 생각은 속도와 데이터량에 상관없이 주요 관심">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/network.jpg">
-<meta property="og:updated_time" content="2019-10-13T01:49:56.000Z">
+<meta property="og:updated_time" content="2019-10-13T01:51:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Network Engine 1부">
-<meta name="twitter:description" content="IoT 에서의 네트워크 엔진1. 개요 인터넷이 보편화된 시점부터 지금까지 데이터 처리에 대한 관심과 이슈는 언제나 있어 왔다. 인터넷의 속도가 느렸던 과거에는 데이터량와 처리속도에 대한 이슈가 그다지 많지는 않았지만, 에러없이 데이터 처리를 하고자 하는 생각은 속도와 데이터량에 상관없이 주요 관심사였다. 5G로 가고 있는 현시점도 마찬가지로 속도와 데이터량">
+<meta name="twitter:description" content="IoT 에서의 네트워크 엔진 작성자 : 플랫폼 개발실 실장 김완철(David Kim)  1. 개요 인터넷이 보편화된 시점부터 지금까지 데이터 처리에 대한 관심과 이슈는 언제나 있어 왔다. 인터넷의 속도가 느렸던 과거에는 데이터량와 처리속도에 대한 이슈가 그다지 많지는 않았지만, 에러없이 데이터 처리를 하고자 하는 생각은 속도와 데이터량에 상관없이 주요 관심">
 <meta name="twitter:image" content="http://yoursite.com/images/network.jpg">
     
 
@@ -189,7 +189,10 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="IoT-에서의-네트워크-엔진"><a href="#IoT-에서의-네트워크-엔진" class="headerlink" title="IoT 에서의 네트워크 엔진"></a>IoT 에서의 네트워크 엔진</h3><h4 id="1-개요"><a href="#1-개요" class="headerlink" title="1. 개요"></a>1. 개요</h4><ul>
+            <h3 id="IoT-에서의-네트워크-엔진"><a href="#IoT-에서의-네트워크-엔진" class="headerlink" title="IoT 에서의 네트워크 엔진"></a>IoT 에서의 네트워크 엔진</h3><blockquote>
+<p>작성자 : 플랫폼 개발실 실장 김완철(David Kim)</p>
+</blockquote>
+<h4 id="1-개요"><a href="#1-개요" class="headerlink" title="1. 개요"></a>1. 개요</h4><ul>
 <li>인터넷이 보편화된 시점부터 지금까지 데이터 처리에 대한 관심과 이슈는 언제나 있어 왔다. 인터넷의 속도가 느렸던 과거에는 데이터량와 처리속도에 대한 이슈가 그다지 많지는 않았지만, 에러없이 데이터 처리를 하고자 하는 생각은 속도와 데이터량에 상관없이 주요 관심사였다. 5G로 가고 있는 현시점도 마찬가지로 속도와 데이터량에 대한 관심은 실시간으로 데이터를 처리하는 솔루션 특히 서비스파트에서 많이 관심을 보이고 있다.</li>
 </ul>
 <h5 id="1-1-데이터-수집"><a href="#1-1-데이터-수집" class="headerlink" title="1.1. 데이터 수집"></a>1.1. 데이터 수집</h5><ul>
@@ -217,7 +220,7 @@ ga('send', 'pageview');
 <li>이와 같은 경우는 전통적인 방식 또는 아키텍처 또는 생각으로는 해결할 수가 없다. NoSQL 또는 유연하게 확장이 가능한 아키텍처 구성 또는 데이터를 수집하고 처리할수 있는 애플리케이션(네트워크 엔진)의 성능이 엄청난 데이터를 흘려다니는 현대에는 반드시 필요한 기본 필수 요건이 되어 가고 있다. </li>
 </ul>
 <h5 id="다음글-2부-보기"><a href="#다음글-2부-보기" class="headerlink" title="다음글 : 2부 보기"></a>다음글 : <a href="/2019/10/12/network2/">2부 보기</a></h5><blockquote>
-<p>본 내용은 작성자 개인적인 의견입니다. 다른 의견이 있으시면, 피드백 환영합니다.<br>작성자 : 플랫폼 개발실 실장 김완철(David Kim)</p>
+<p>본 내용은 작성자 개인적인 의견입니다. 다른 의견이 있으시면, 피드백 환영합니다.</p>
 </blockquote>
 
         </div>
@@ -304,8 +307,11 @@ ga('send', 'pageview');
         "dateCreated": "2019-10-12",
         "dateModified": "2019-10-13",
         "url": "http://yoursite.com/2019/10/12/network/",
-        "description": "IoT 에서의 네트워크 엔진1. 개요
-인터넷이 보편화된 시점부터 지금까지 데이터 처리에 대한 관심과 이슈는 언제나 있어 왔다. 인터넷의 속도가 느렸던 과거에는 데이터량와 처리속도에 대한 이슈가 그다지 많지는 않았지만, 에러없이 데이터 처리를 하고자 하는 생각은 속도와 데이터량에 상관없이 주요 관심사였다. 5G로 가고 있는 현시점도 마찬가지로 속도와 데이터량",
+        "description": "IoT 에서의 네트워크 엔진
+작성자 : 플랫폼 개발실 실장 김완철(David Kim)
+
+1. 개요
+인터넷이 보편화된 시점부터 지금까지 데이터 처리에 대한 관심과 이슈는 언제나 있어 왔다. 인터넷의 속도가 느렸던 과거에는 데이터량와 처리속도에 대한 이슈가 그다지 많지는 않았지만, 에러없이 데이터 처리를 하고자 하는 생각은 속도와 데이터량에 상관없이 주요 관심",
         "wordCount": 667
     }
 </script>
