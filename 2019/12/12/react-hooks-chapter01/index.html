@@ -6,7 +6,7 @@
     
 
     
-    <title>React[hooks]-개발환경 구축하기 1부 | People and Technology</title>
+    <title>React-1부 [개발환경 구축하기] | People and Technology</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -15,15 +15,15 @@
     <meta name="description" content="작성자 : 플랫폼 개발실 R&amp;amp;D팀 유주빈  들어가기 앞서 기존의 HTML , CSS를 이용하여 충분히 웹 사이트를 만들 수 있습니다. 또한 자바스크립트까지 활용한다면 동적인 요소들도 제어할 수 있습니다. 그러나 앞서 말한 HTML , CSS , 순수한 자바스크립트로만 프론트 엔드를 개발한다는 것은 상당히 복잡하고 어렵습니다. 이러한 부분을 이 글에">
 <meta name="keywords" content="react">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React[hooks]-개발환경 구축하기 1부">
+<meta property="og:title" content="React-1부 [개발환경 구축하기]">
 <meta property="og:url" content="http://yoursite.com/2019/12/12/react-hooks-chapter01/index.html">
 <meta property="og:site_name" content="People and Technology">
 <meta property="og:description" content="작성자 : 플랫폼 개발실 R&amp;amp;D팀 유주빈  들어가기 앞서 기존의 HTML , CSS를 이용하여 충분히 웹 사이트를 만들 수 있습니다. 또한 자바스크립트까지 활용한다면 동적인 요소들도 제어할 수 있습니다. 그러나 앞서 말한 HTML , CSS , 순수한 자바스크립트로만 프론트 엔드를 개발한다는 것은 상당히 복잡하고 어렵습니다. 이러한 부분을 이 글에">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/react-hooks.png">
-<meta property="og:updated_time" content="2019-12-15T01:42:46.000Z">
+<meta property="og:updated_time" content="2019-12-29T09:51:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React[hooks]-개발환경 구축하기 1부">
+<meta name="twitter:title" content="React-1부 [개발환경 구축하기]">
 <meta name="twitter:description" content="작성자 : 플랫폼 개발실 R&amp;amp;D팀 유주빈  들어가기 앞서 기존의 HTML , CSS를 이용하여 충분히 웹 사이트를 만들 수 있습니다. 또한 자바스크립트까지 활용한다면 동적인 요소들도 제어할 수 있습니다. 그러나 앞서 말한 HTML , CSS , 순수한 자바스크립트로만 프론트 엔드를 개발한다는 것은 상당히 복잡하고 어렵습니다. 이러한 부분을 이 글에">
 <meta name="twitter:image" content="http://yoursite.com/images/react-hooks.png">
     
@@ -162,7 +162,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-        React[hooks]-개발환경 구축하기 1부
+        React-1부 [개발환경 구축하기]
         </h1>
     
 
@@ -199,7 +199,10 @@ ga('send', 'pageview');
 <li>리액트는 페이스북에서 제공을 하고 있는 프론트 엔드 라이브러리 입니다. 이는 컴포넌트 기반으로 개발자가 UI를 설계하도록 도와줍니다.</li>
 </ul>
 <h2 id="React의-특징"><a href="#React의-특징" class="headerlink" title="React의 특징"></a>React의 특징</h2><h3 id="1-컴포넌트-기반"><a href="#1-컴포넌트-기반" class="headerlink" title="1. 컴포넌트 기반"></a>1. 컴포넌트 기반</h3><ul>
-<li>위에서 언급했듯이 React는 컴포넌트 기반이라고 하였습니다. 이를 설명하기 위하여 아래의 사진을 보도록 하겠습니다.<br><img src="/images/react/domTree.png" alt="dom 트리"></li>
+<li>위에서 언급했듯이 React는 컴포넌트 기반이라고 하였습니다. 이를 설명하기 위하여 아래의 사진을 보도록 하겠습니다.</li>
+</ul>
+<p><img src="/images/react/domTree.png" alt="dom 트리"></p>
+<ul>
 <li>위의 사진은 이 글에서 실습할 React dom 구조 및 컴포넌트 구조입니다. 일반적인 태그로 아주 간단한 dom 트리구조를 갖고 있습니다. 그러나 빨강색 박스로 한개 이상의 dom을 묶은 컴포넌트 또한 확인할 수 있습니다. 즉, 컴포넌트는 여러개의 태그를 갖을 수 있으며 해당 태그에 대한 로직과 UI 표현을 제어할 수 있습니다.</li>
 </ul>
 <h3 id="2-virtual-dom-가상-dom"><a href="#2-virtual-dom-가상-dom" class="headerlink" title="2. virtual dom(가상 dom)"></a>2. virtual dom(가상 dom)</h3><ul>
@@ -207,6 +210,10 @@ ga('send', 'pageview');
 </ul>
 <h3 id="3-One-way-Data-Flow-단방향-데이터"><a href="#3-One-way-Data-Flow-단방향-데이터" class="headerlink" title="3. One-way Data Flow (단방향 데이터)"></a>3. One-way Data Flow (단방향 데이터)</h3><ul>
 <li>위에서 설명한 리액트의 특징을 종합해보면 , dom을 컴포넌트 단위로 분리할 수 있으며 해당 컴포넌트들은 각각의 state(상태)를 갖을 수 있습니다. 이렇게 다수의 컴포넌트들은 데이터를 서로에게 전달할 수 있습니다. 다만, 이러한 데이터의 흐름은 기본적으로 부모 컴포넌트에서 자식 컴포넌트로 단방향 흐름만이 가능합니다.<br><img src="/images/react/oneFlow.png" alt="단방향 데이터 흐름"></li>
+</ul>
+<h2 id="React-간단한-예제"><a href="#React-간단한-예제" class="headerlink" title="React 간단한 예제"></a>React 간단한 예제</h2><p><img src="/images/react/react_setting_result.png" alt="결과"></p>
+<ul>
+<li>아래의 내용을 만들기 전에 미리 본글에서 만들 아주 간단한 예제입니다. 지금부터 해당 설명을 하도록 하겠습니다.</li>
 </ul>
 <h2 id="React의-개발환경-설정"><a href="#React의-개발환경-설정" class="headerlink" title="React의 개발환경 설정"></a>React의 개발환경 설정</h2><h3 id="1-경로-설정-및-관련-라이브러리-다운로드"><a href="#1-경로-설정-및-관련-라이브러리-다운로드" class="headerlink" title="1. 경로 설정 및 관련 라이브러리 다운로드"></a>1. 경로 설정 및 관련 라이브러리 다운로드</h3><p>하위 설명은 node가 설치되어 있다는 전제조건하에 설명에 들어가도록 하겠습니다. 이 글은 v10.16.3 버전으로 작성되었습니다.</p>
 <ul>
@@ -273,7 +280,7 @@ ga('send', 'pageview');
 <li><p>상단에 react 모듈을 불러오며 class와 동일하게 컴포넌트를 export를 합니다. 다만 함수를 선언하여 내부에 return으로 dom을 반환하면 알아서 React의 Component를 상속받아 생성된 class와 동일한 기능을 하게 됩니다.</p>
 </li>
 </ul>
-<h4 id="5-User-jsx-hooks"><a href="#5-User-jsx-hooks" class="headerlink" title="5) User.jsx (hooks)"></a>5) User.jsx (hooks)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;</span><br><span class="line"></span><br><span class="line">export default class User extends React.Component&#123;</span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">    &#125;;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td&gt;&#123;this.props.name&#125;&lt;/td&gt;</span><br><span class="line">                &lt;td&gt;&#123;this.props.age&#125;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="5-User-jsx"><a href="#5-User-jsx" class="headerlink" title="5) User.jsx"></a>5) User.jsx</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;;</span><br><span class="line"></span><br><span class="line">export default class User extends React.Component&#123;</span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">    &#125;;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td&gt;&#123;this.props.name&#125;&lt;/td&gt;</span><br><span class="line">                &lt;td&gt;&#123;this.props.age&#125;&lt;/td&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>UserList.jsx에서 name과 age 속성을 전달하였습니다. 해당 전달받은 값은 props로 전달이 됩니다. 이는 this.props라는 키워드를 통해 접근할 수 있습니다. 이를 통해 render함수 내부에 값의 위치를 설정할 수 있습니다.</p>
@@ -296,13 +303,21 @@ ga('send', 'pageview');
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack-dev-server</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>개발 서버 명령어를 통해 서버가 열리며 기본 포트인 8080으로 서버가 개설됩니다. 이제 브라우저를 열어 localhost:8080을 입력하면 아래와 같은 결과가 브러우저에 나타납니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">김아무개	25</span><br><span class="line">이아무개	26</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>비록 css 및 동적인 자바스크립트로 UI를 수정하여 보기 좋은 결과물은 아니지만 기본적인 React의 셋팅 및 구조에 대해서 알아보았습니다.</p>
 </li>
 </ul>
+<p><img src="/images/react/react_setting_result.png" alt="결과"></p>
 <ul>
-<li>소스 깃허브 주소 : <a href="https://github.com/SayRew/pntbiz_react.git" target="_blank" rel="noopener">https://github.com/SayRew/pntbiz_react.git</a></li>
+<li><p>비록 css 및 동적인 자바스크립트로 UI를 수정하여 보기 좋은 결과물은 아니지만 기본적인 React의 셋팅 및 구조에 대해서 알아보았습니다.</p>
+</li>
+<li><p>소스 깃허브 주소 : <a href="https://github.com/SayRew/pntbiz_react.git" target="_blank" rel="noopener">https://github.com/SayRew/pntbiz_react.git</a></p>
+</li>
+</ul>
+<blockquote>
+<p>작성자 : 플랫폼 개발실</p>
+</blockquote>
+<h5 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h5><ul>
+<li>책 : 리액트를 다루는 기술(개정판)</li>
+<li><a href="https://www.geeksforgeeks.org/reactjs-reactdom/" target="_blank" rel="noopener">https://www.geeksforgeeks.org/reactjs-reactdom/</a></li>
 </ul>
 
         </div>
@@ -381,20 +396,20 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "People and Technology"
         },
-        "headline": "React[hooks]-개발환경 구축하기 1부",
+        "headline": "React-1부 [개발환경 구축하기]",
         "image": "http://yoursite.com/images/react-hooks.png",
         "keywords": "react",
         "genre": "IT Tech 3. React",
         "datePublished": "2019-12-12",
         "dateCreated": "2019-12-12",
-        "dateModified": "2019-12-15",
+        "dateModified": "2019-12-29",
         "url": "http://yoursite.com/2019/12/12/react-hooks-chapter01/",
         "description": "
 작성자 : 플랫폼 개발실 R&amp;D팀 유주빈
 
 들어가기 앞서
 기존의 HTML , CSS를 이용하여 충분히 웹 사이트를 만들 수 있습니다. 또한 자바스크립트까지 활용한다면 동적인 요소들도 제어할 수 있습니다. 그러나 앞서 말한 HTML , CSS , 순수한 자바스크립트로만 프론트 엔드를 개발한다는 것은 상당히 복잡하고 어렵습니다. 이러한 부분을 이 글에",
-        "wordCount": 2085
+        "wordCount": 2115
     }
 </script>
 
@@ -509,6 +524,26 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2019/12/29/react-hooks-chapter02/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/react-hooks.png)" alt="React-2부 [상태관리]" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/it-tech/">IT Tech</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/it-tech/3-react/">3. React</a></p>
+                            <p class="item-title"><a href="/2019/12/29/react-hooks-chapter02/" class="title">React-2부 [상태관리]</a></p>
+                            <p class="item-date"><time datetime="2019-12-29T04:29:55.000Z" itemprop="datePublished">2019-12-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2019/12/24/java-refactoring-01/" class="thumbnail">
     
     
@@ -532,7 +567,7 @@ ga('send', 'pageview');
                             <a href="/2019/12/12/react-hooks-chapter01/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/react-hooks.png)" alt="React[hooks]-개발환경 구축하기 1부" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/react-hooks.png)" alt="React-1부 [개발환경 구축하기]" class="thumbnail-image"></span>
     
     
 </a>
@@ -541,7 +576,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/it-tech/">IT Tech</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/it-tech/3-react/">3. React</a></p>
-                            <p class="item-title"><a href="/2019/12/12/react-hooks-chapter01/" class="title">React[hooks]-개발환경 구축하기 1부</a></p>
+                            <p class="item-title"><a href="/2019/12/12/react-hooks-chapter01/" class="title">React-1부 [개발환경 구축하기]</a></p>
                             <p class="item-date"><time datetime="2019-12-12T05:56:55.000Z" itemprop="datePublished">2019-12-12</time></p>
                         </div>
                     </li>
@@ -586,26 +621,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/10/12/network2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/network2.png)" alt="Network Engine 2부" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/it-tech/">IT Tech</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/it-tech/1-iot/">1. IoT</a></p>
-                            <p class="item-title"><a href="/2019/10/12/network2/" class="title">Network Engine 2부</a></p>
-                            <p class="item-date"><time datetime="2019-10-12T13:47:01.000Z" itemprop="datePublished">2019-10-12</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -615,7 +630,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/">IT Tech</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/1-iot/">1. IoT</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/2-data-analysis/">2. Data Analysis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/3-react/">3. React</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/4-java/">4. Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/9-etc/">9. etc</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/recruit/">Recruit</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/recruit/platform-engineer/">Platform Engineer</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/">IT Tech</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/1-iot/">1. IoT</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/2-data-analysis/">2. Data Analysis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/3-react/">3. React</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/4-java/">4. Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/it-tech/9-etc/">9. etc</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/recruit/">Recruit</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/recruit/platform-engineer/">Platform Engineer</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -625,7 +640,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
@@ -635,7 +650,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iot/">IoT</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lbs/">LBS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">Network</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">Node.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pull-requests/">Pull requests</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rtls/">RTLS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vertx/">VertX</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beacon/">beacon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-analysis/">data analysis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/engineer/">engineer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/platform/">platform</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recruit/">recruit</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iot/">IoT</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lbs/">LBS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">Network</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">Node.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pull-requests/">Pull requests</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rtls/">RTLS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vertx/">VertX</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beacon/">beacon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dashboard/">dashboard</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-analysis/">data analysis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/engineer/">engineer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/platform/">platform</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recruit/">recruit</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -645,7 +660,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/iot/" style="font-size: 20px;">IoT</a> <a href="/tags/lbs/" style="font-size: 20px;">LBS</a> <a href="/tags/network/" style="font-size: 20px;">Network</a> <a href="/tags/node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/pull-requests/" style="font-size: 10px;">Pull requests</a> <a href="/tags/rtls/" style="font-size: 20px;">RTLS</a> <a href="/tags/vertx/" style="font-size: 20px;">VertX</a> <a href="/tags/beacon/" style="font-size: 10px;">beacon</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/data-analysis/" style="font-size: 10px;">data analysis</a> <a href="/tags/engineer/" style="font-size: 10px;">engineer</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/platform/" style="font-size: 10px;">platform</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/recruit/" style="font-size: 10px;">recruit</a>
+            <a href="/tags/iot/" style="font-size: 20px;">IoT</a> <a href="/tags/lbs/" style="font-size: 20px;">LBS</a> <a href="/tags/network/" style="font-size: 20px;">Network</a> <a href="/tags/node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/pull-requests/" style="font-size: 10px;">Pull requests</a> <a href="/tags/rtls/" style="font-size: 20px;">RTLS</a> <a href="/tags/vertx/" style="font-size: 20px;">VertX</a> <a href="/tags/beacon/" style="font-size: 10px;">beacon</a> <a href="/tags/dashboard/" style="font-size: 10px;">dashboard</a> <a href="/tags/data-analysis/" style="font-size: 10px;">data analysis</a> <a href="/tags/engineer/" style="font-size: 10px;">engineer</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/platform/" style="font-size: 10px;">platform</a> <a href="/tags/react/" style="font-size: 20px;">react</a> <a href="/tags/recruit/" style="font-size: 10px;">recruit</a>
         </div>
     </div>
 
